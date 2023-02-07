@@ -1,0 +1,29 @@
+/* Select Box */
+
+.bag-dropdown {
+  .dropdown-toggle {
+    &:hover,
+    &:active,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+      background-color: rgb(209, 213, 219) !important;
+    }
+
+    &::after {
+      display: none !important;
+    }
+  }
+
+  &.show {
+    .dropdown-toggle {
+      img {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    min-width: 55px !important;
+  }
+}

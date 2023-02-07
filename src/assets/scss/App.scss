@@ -1,0 +1,92 @@
+@import "~bootstrap/scss/bootstrap";
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
+@import "_colors.scss";
+@import "_typography.scss";
+
+// ==================== General ==================== //
+
+body {
+  // font-family: "Barlow", sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  // letter-spacing: -0.34px;
+  line-height: 20px;
+  color: $black;
+  background-color: $bg-gray;
+  // background-color: gray;
+}
+
+button:focus-visible {
+  outline: none;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 1176px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.border-bottom {
+  border-bottom: 1px solid $border;
+}
+
+.fade.modal.show {
+  padding-left: 0;
+}
+
+.sign-input {
+  border: 0;
+  border-bottom: 1px solid $black;
+
+  &:focus {
+    border-color: $black;
+    box-shadow: none;
+  }
+}
+
+.primary-check,
+.secondary-check {
+  .form-check-input {
+    border: 2px solid $primary;
+
+    &:checked {
+      background-color: $primary;
+      box-shadow: none;
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+
+  .form-check-input:checked[type="checkbox"] {
+    background-image: url("../icons/check-marker.svg");
+  }
+}
+
+.primary-check {
+  .form-check-input[type="checkbox"] {
+    border-radius: 8px;
+  }
+
+  .form-check-input:checked[type="checkbox"] {
+    background-size: 16px;
+  }
+}
+
+.secondary-check {
+  .form-check-input[type="checkbox"] {
+    border-radius: 6px;
+  }
+
+  .form-check-input:checked[type="checkbox"] {
+    background-size: 12px;
+  }
+}

@@ -1,0 +1,11 @@
+@import "../../assets/scss/colors";
+
+/* Circle Button */
+
+.circle-btn {
+  border: 2px solid $primary;
+
+  &.dark {
+    border: 2px solid $light-gray;
+  }
+}

@@ -1,0 +1,57 @@
+@import "../../assets/scss/colors";
+
+/* Footer */
+
+.footer {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background-color: $secondary;
+
+  .form-check {
+    margin-top: 2px;
+    margin-bottom: 0;
+
+    .form-check-input {
+      float: right;
+      width: 30px;
+      height: 16px;
+      margin-left: 10px;
+      border-color: $primary;
+      background-color: transparent;
+      background-image: url("../../assets/images/red-dot.png");
+      background-size: 12px;
+      background-position-x: 1px;
+      cursor: pointer;
+
+      &:checked {
+        border-color: $primary;
+        background-color: $primary;
+        background-image: url("../../assets/images/white-dot.png");
+        background-position-x: 14px;
+        background-position-y: 1px;
+      }
+
+      &:focus {
+        border-color: $primary;
+        background-image: url("../../assets/images/red-dot.png");
+        box-shadow: none;
+
+        &:checked {
+          background-image: url("../../assets/images/white-dot.png");
+        }
+      }
+    }
+
+    label {
+      margin-right: 4px;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $primary;
+    }
+  }
+}

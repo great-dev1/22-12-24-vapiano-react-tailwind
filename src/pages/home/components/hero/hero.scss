@@ -1,0 +1,39 @@
+/* Hero */
+
+.info-modal {
+  width: 100%;
+  margin: 0 !important;
+
+  .modal-content {
+    position: relative;
+    border: 0;
+    overflow: hidden;
+
+    .content {
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-img {
+    max-width: 362px;
+  }
+
+  .info-modal {
+    max-width: 546px !important;
+    margin: 10px auto !important;
+
+    .modal-content {
+      height: calc(100vh - 20px);
+      max-height: 680px;
+      border-radius: 24px;
+
+      .content {
+        overflow: auto;
+      }
+    }
+  }
+}

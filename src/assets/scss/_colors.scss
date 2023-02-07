@@ -1,0 +1,92 @@
+$primary: #e4032e;
+$secondary: #2c2c31;
+$black: #000;
+$gray: #7e7e7e;
+$light-gray: #d3d3d3;
+$border: #e4e4e4;
+$bg-gray: #f6f6f6;
+$pink: #ffa8b9;
+$green: #2eb343;
+$blue: #0076dc;
+$caffine: #ad782a;
+$dairy: #0866a4;
+$lactose: #4d08a4;
+$vegan: #377b1a;
+
+/* Text Color */
+
+.primary {
+  color: $primary;
+}
+
+.hover\:primary {
+  &:hover {
+    color: $primary;
+  }
+}
+
+.secondary {
+  color: $secondary;
+}
+
+.gray {
+  color: $gray;
+}
+
+.green {
+  color: $green;
+}
+
+.blue {
+  color: $blue;
+}
+
+.caffine {
+  color: $caffine;
+}
+
+.dairy {
+  color: $dairy;
+}
+
+.lactose {
+  color: $lactose;
+}
+
+.vegan {
+  color: $vegan;
+}
+
+/* Background Color */
+
+.primary-bg {
+  background-color: $primary;
+}
+
+.hover\:primary-bg {
+  &:hover {
+    background-color: $primary;
+  }
+}
+
+.secondary-bg {
+  background-color: $secondary;
+}
+
+.gray-bg {
+  background-color: $bg-gray;
+}
+
+.light-gray-bg {
+  background-color: $light-gray;
+}
+
+/* Border Color */
+
+.primary-border {
+  border-color: $primary !important;
+}
+
+.light-gray-border {
+  border-color: $light-gray !important;
+}

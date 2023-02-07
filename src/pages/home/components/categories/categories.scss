@@ -1,0 +1,63 @@
+@import "../../../../assets/scss/colors";
+
+/* Categories */
+
+.category-slider {
+  width: calc(100% - 40px);
+}
+
+.category-nav {
+  &:hover {
+    color: $black;
+    background-color: $bg-gray;
+  }
+}
+
+.is-active {
+  color: white;
+  background-color: $primary;
+
+  &:hover {
+    color: white;
+    background-color: $primary;
+  }
+}
+
+.category-dropdown {
+  .dropdown-toggle {
+    span {
+      padding: 3px 10px;
+      border-radius: 32px;
+
+      &:hover {
+        background-color: $bg-gray;
+      }
+    }
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      outline: none !important;
+      box-shadow: none !important;
+      background-color: rgb(209, 213, 219) !important;
+    }
+
+    &::after {
+      display: none !important;
+    }
+  }
+
+  &.show {
+    .dropdown-toggle {
+      img {
+        transform: rotate(-180deg);
+      }
+    }
+  }
+
+  .dropdown-menu {
+    .dropdown-item {
+      font-size: 14px;
+    }
+  }
+}

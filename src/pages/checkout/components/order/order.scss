@@ -1,0 +1,26 @@
+@import "../../../../assets/scss/colors";
+
+/* Order */
+
+.tip-slider-track {
+  top: 10px;
+  height: 5px;
+  border-radius: 5px;
+  background: $pink;
+}
+
+.tip-slider-track.tip-slider-track-0 {
+  background: $primary;
+}
+
+.tip-slider-thumb {
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $primary;
+  border-radius: 100%;
+  outline: none;
+  background: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}

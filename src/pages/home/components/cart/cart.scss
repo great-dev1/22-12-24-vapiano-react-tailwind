@@ -1,0 +1,37 @@
+@import "../../../../assets/scss/colors";
+
+/* Cart */
+
+.order-item {
+  padding: 18px 24px;
+}
+
+.tip-title {
+  width: 130px;
+}
+
+.tip-slider {
+  width: 100%;
+}
+
+.tip-slider-track {
+  top: 10px;
+  height: 4px;
+  border-radius: 2px;
+  background: $pink;
+}
+
+.tip-slider-track.tip-slider-track-0 {
+  background: $primary;
+}
+
+.tip-slider-thumb {
+  top: 2px;
+  width: 20px;
+  height: 20px;
+  border: 2px solid $primary;
+  border-radius: 100%;
+  outline: none;
+  background: white;
+  cursor: pointer;
+}

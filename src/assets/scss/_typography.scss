@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@300;400;500;600;700&display=swap");
+
+// @font-face {
+//   font-family: "Barlow";
+//   font-style: normal;
+//   font-weight: 400;
+//   font-display: swap;
+//   src: url(https://s3.eu-central-1.amazonaws.com/api.production.main/app_brandings/brand_43/web_app/fonts/Barlow-Light.ttf)
+//     format("truetype");
+// }
+
+// @font-face {
+//   // font-family: "Barlow";
+//   font-style: normal;
+//   font-weight: 600;
+//   font-display: swap;
+//   src: url(https://s3.eu-central-1.amazonaws.com/api.production.main/app_brandings/brand_43/web_app/fonts/Barlow-SemiBold.ttf)
+//     format("truetype");
+// }
+
+// @font-face {
+//   font-family: "Barlow";
+//   font-style: normal;
+//   font-weight: 700;
+//   font-display: swap;
+//   src: url(https://s3.eu-central-1.amazonaws.com/api.production.main/app_brandings/brand_43/web_app/fonts/BarlowCondensed-SemiBold.ttf)
+//     format("truetype");
+// }
+
+/* Typography */
+
+.hero-title {
+  font-size: 28px;
+  line-height: 35px;
+}
+
+.primary-title {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.secondary-title {
+  font-size: 17px;
+  line-height: 24px;
+}
