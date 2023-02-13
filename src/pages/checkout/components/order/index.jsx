@@ -30,7 +30,7 @@ const Order = ({ bagData }) => {
   }, [subtotal, gratuity, discount, tax])
 
   return (
-    <div className="mx-auto max-w-[400px] px-[16px] pt-10 xl:pt-20">
+    <div className="mx-auto max-w-[410px] px-6 py-10 xl:py-20">
       {/* Place Order Button */}
       <div className="border-bottom pb-[20px]">
         <button className="secondary-bg secondary-title w-full rounded-full p-[16px] font-semibold text-white duration-300 hover:bg-gray-500">

@@ -48,7 +48,7 @@ const Payment = () => {
               <input type="radio" className="form-check-input mt-1.5 h-5 w-5" disabled />
               <h3 className="py-2 pl-[20px] font-medium">Credit or Debit Card</h3>
               <button
-                className="mx-auto mt-2 w-[414px] rounded-full border !border-black p-2 duration-300 hover:bg-[#2C2C31] hover:text-white"
+                className="mt-2 w-full rounded-full border !border-black p-2 duration-300 hover:bg-[#2C2C31] hover:text-white"
                 onClick={() => setShowModal(true)}
               >
                 <span className="text-lg font-semibold">ADD PAYMENT CARD</span>
