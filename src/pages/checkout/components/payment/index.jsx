@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { Modal } from "react-bootstrap"
+import IMask from "imask"
+import { IMaskInput } from "react-imask"
 import CardIcon from "../../../../assets/icons/card-icon.svg"
 import CircleCloseIcon from "../../../../assets/icons/circle-close-icon.svg"
 
@@ -77,14 +79,14 @@ const Payment = () => {
                   </div>
 
                   <div className="form-floating">
-                    <input
-                      type="text"
+                    <IMaskInput
                       className="sign-input form-control rounded-none px-1 font-medium text-black"
-                      name="cardNumber"
+                      mask={Number}
+                      unmask={false}
                       id="cardNumber"
-                      value={cardNumber}
-                      onChange={(e) => setCardNumber(e.target.value)}
+                      name="cardNumber"
                       placeholder="Card Number"
+                      onAccept={(value) => setCardNumber(value)}
                     />
                     <label htmlFor="cardNumber" className="px-1 font-medium">
                       Card Number
@@ -96,14 +98,24 @@ const Payment = () => {
                       <label htmlFor="expiryDate" className="px-1 font-medium">
                         Expiry Date*
                       </label>
-                      <input
-                        type="text"
+                      <IMaskInput
                         className="sign-input form-control rounded-none px-1 font-medium text-black"
-                        name="expiryDate"
+                        mask={"MM/YY"}
+                        blocks={{
+                          YY: {
+                            mask: "00"
+                          },
+                          MM: {
+                            mask: IMask.MaskedRange,
+                            from: 1,
+                            to: 12
+                          }
+                        }}
+                        unmask={false}
                         id="expiryDate"
-                        value={expiryDate}
-                        onChange={(e) => setExpiryDate(e.target.value)}
+                        name="expiryDate"
                         placeholder="MM/YY"
+                        onAccept={(value) => setExpiryDate(value)}
                       />
                     </div>
 
@@ -114,11 +126,12 @@ const Payment = () => {
                       <input
                         type="text"
                         className="sign-input form-control rounded-none px-1 font-medium text-black"
-                        name="securityCode"
                         id="securityCode"
+                        name="securityCode"
                         value={securityCode}
-                        onChange={(e) => setSecurityCode(e.target.value)}
-                        placeholder=""
+                        onChange={(e) => {
+                          if (/^\d{0,4}$/.test(e.target.value) === true) setSecurityCode(e.target.value)
+                        }}
                       />
                     </div>
                   </div>
@@ -130,14 +143,14 @@ const Payment = () => {
                         : `primary-bg text-white`
                     } h-10 w-full rounded-full text-sm font-medium uppercase`}
                     disabled={cardHolder === "" || cardNumber === "" || expiryDate === "" || securityCode === ""}
-                    onClick={() =>
+                    onClick={() => {
                       setCard({
                         cardHolder,
                         cardNumber,
                         expiryDate,
                         securityCode
                       })
-                    }
+                    }}
                   >
                     Add Card
                   </button>

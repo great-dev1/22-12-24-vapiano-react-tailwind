@@ -232,8 +232,8 @@ const MenuBox = ({ itemData, bagData, setBagData }) => {
         </div>
       </div>
 
-      <Modal show={showModal} backdrop="static" dialogClassName={`menu-modal ${!itemData.image && "no-img"}`} centered>
-        <button className="absolute top-5 right-5 z-20" onClick={() => setShowModal(false)}>
+      <Modal show={showModal} backdrop="static" fullscreen="md-down" dialogClassName={`menu-modal ${!itemData.image && "no-img"}`} centered>
+        <button className="fixed top-5 right-5 z-20 md:absolute" onClick={() => setShowModal(false)}>
           <img src={CloseIcon} alt="close" />
         </button>
 
@@ -248,12 +248,12 @@ const MenuBox = ({ itemData, bagData, setBagData }) => {
           {/* Right Detail */}
           <div className="detail gray-bg relative flex-shrink-0">
             {/* Top title */}
-            <div className="absolute top-0 z-10 w-full bg-white px-6 py-[16px] text-center shadow-sm">
+            <div className="fixed top-0 z-10 w-full bg-white px-6 py-[16px] text-center shadow-sm md:absolute">
               <h3 className={`secondary-title font-semibold uppercase ${hideTitle && "invisible"}`}>{itemData.name}</h3>
             </div>
 
             {/* Quantity Increase/Decrease and Add to Bag Buttons */}
-            <div className="absolute bottom-0 z-10 flex w-full items-center justify-between gap-4 bg-white px-6 py-[16px] shadow">
+            <div className="fixed bottom-0 z-10 flex w-full items-center justify-between gap-4 bg-white px-6 py-[16px] shadow md:absolute">
               <div className="flex w-24 items-center justify-between">
                 <button className="rounded-full" onClick={decrease}>
                   <img src={CircleMinusIcon} alt="minus" />
@@ -273,7 +273,7 @@ const MenuBox = ({ itemData, bagData, setBagData }) => {
               </button>
             </div>
 
-            <div className="inner h-full w-full overflow-auto pt-14 pb-32" onScroll={handleScroll}>
+            <div className="inner h-full w-full overflow-auto pb-32 md:pt-14" onScroll={handleScroll}>
               {/* Name, Price, Energy, Description and Nutrition */}
               <div className="bg-white p-6">
                 <h3 className="primary-title mb-1 font-semibold uppercase">{itemData.name}</h3>
