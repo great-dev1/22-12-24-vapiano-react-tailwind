@@ -1,25 +1,25 @@
-import { useRef } from "react"
+// import { useRef } from "react"
 import ScrollspyNav from "react-scrollspy-nav"
-import Slider from "react-slick"
+// import Slider from "react-slick"
 // import { Dropdown } from "react-bootstrap"
 // import ArrowIcon from "../../../../assets/icons/arrow-icon.svg"
-import ArrowIcon from "../../../../assets/icons/arrow-right-icon.svg"
+// import ArrowIcon from "../../../../assets/icons/arrow-right-icon.svg"
 import "./categories.scss"
 
-const settings = {
-  arrows: false,
-  slidesToShow: 2,
-  infinite: false,
-  swipeToSlide: true,
-  variableWidth: true,
-  focusOnSelect: true
-}
+// const settings = {
+//   arrows: false,
+//   // focusOnSelect: true,
+//   slidesToShow: 1,
+//   infinite: false,
+//   swipeToSlide: true,
+//   variableWidth: true
+// }
 
 const Categories = ({ categoriesData }) => {
-  const slider = useRef()
+  // const slider = useRef()
 
   return (
-    <div className="sticky top-0 w-full bg-white shadow-sm">
+    <div className="top-0 z-10 w-full bg-white shadow-sm md:sticky">
       <div className="container flex items-center justify-between gap-3">
         {/* Desktop */}
         {/* <div className="hidden items-center justify-between gap-16 xl:flex">
@@ -48,23 +48,23 @@ const Categories = ({ categoriesData }) => {
         </div> */}
 
         {/* Mobile */}
-        <div className="category-slider">
-          <ScrollspyNav scrollTargetIds={categoriesData} activeNavClass="is-active" scrollDuration="100">
-            <Slider {...settings} ref={slider}>
-              {categoriesData.map((el, idx) => (
-                <div key={idx} className="cursor-pointer px-2 py-[16px]">
-                  <a href={`#${el}`} className="category-nav inline-block rounded-full px-[12px] py-2 font-semibold uppercase duration-300">
-                    {el}
-                  </a>
-                </div>
-              ))}
-            </Slider>
-          </ScrollspyNav>
-        </div>
+        <ScrollspyNav scrollTargetIds={categoriesData} activeNavClass="is-active" scrollDuration="100">
+          <div className="flex flex-wrap gap-x-4 gap-y-2 py-[12px]">
+            {/* <Slider {...settings} ref={slider}> */}
+            {categoriesData.map((el, idx) => (
+              <div key={idx} className="cursor-pointer">
+                <a href={`#${el}`} className="category-nav inline-block rounded-full px-[12px] py-2 font-semibold uppercase duration-300">
+                  {el}
+                </a>
+              </div>
+            ))}
+            {/* </Slider> */}
+          </div>
+        </ScrollspyNav>
 
-        <button className="p-1" onClick={() => slider.current.slickNext()}>
+        {/* <button className="p-1" onClick={() => slider.current.slickNext()}>
           <img src={ArrowIcon} alt="arrow" />
-        </button>
+        </button> */}
       </div>
     </div>
   )
